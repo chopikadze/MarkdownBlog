@@ -1,52 +1,30 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.UI.WebControls
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>@ViewBag.Title - george.softumus.com</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-@*        @Styles.Render("~/Content/bootstrap")
-        @Styles.Render("~/Content/css")*@
-        @*@Scripts.Render("~/bundles/modernizr")*@
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/Content/site.css">
     </head>
     <body>
         
-        <ul>
-            <li><a href="/all">All pages</a></li>
-        </ul>
-        <hr/>
-
-        @*<div id="popup-message"></div>*@
-        @RenderBody()
-
-        @*        @Html.Partial("_TopNavigation")
-        
         <div class="container">
-            
-            @Html.Partial("_Breadcrumb")
-
-            @if (Html.ViewExists("_LeftNavigation"))
-            {
-                <div class="row">
-                    <div class="col-md-2">
-                        <ul class="nav nav-pills nav-stacked">@Html.PartialIfExists("_LeftNavigation")</ul>
-                    </div>
-                    <div class="col-md-10">
-                        <h2>@ViewBag.Title</h2>
-                        @RenderBody()
-                    </div>
-                </div>
-            }
-            else
-            {
+            <ul class="nav nav-pills top-navigation">
+                <li><a href="/All" title="All pages"><span class="glyphicon glyphicon-home"></span></a></li>
+                <li><a href="/About" title="About me"><span class="glyphicon glyphicon-user"></span></a></li>
+            </ul>
+            <div>
                 <h2>@ViewBag.Title</h2>
-                @RenderBody()
-            }
+                @RenderBody()                
+            </div>
         </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @Scripts.Render("~/bundles/js")
-        @RenderSection("scripts", required: false)*@
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     </body>
 </html>

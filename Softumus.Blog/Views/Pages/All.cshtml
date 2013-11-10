@@ -4,12 +4,14 @@
     ViewBag.Title = "All pages";
 }
 
-<ul>
+<ul class="nav nav-pills nav-stacked">
 @foreach (var descr in Model.PageDescriptions)
 {
     <li>
-        <p>@descr.DateTime.ToString("yyyy-MM-dd")</p>
-        <h3><a href="@descr.Url">@descr.Title</a></h3>
+        <a href="@descr.Url">
+            <span class="page-dt">@descr.DateTime.ToString("yyyy-MM-dd")</span>
+            @descr.Title
+        </a>
     </li>
 }
 </ul>

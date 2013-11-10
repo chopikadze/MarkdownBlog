@@ -11,11 +11,13 @@ namespace Softumus.Blog.Models
     {
         private const string PagesPath = "~/pages/";
         private static readonly int _DateTimePrefixLength = "yyyymmdd".Length;
+        private static readonly string _BlogEntriesPrefix = new string('?', _DateTimePrefixLength) + "-";
 
         public static ICollection<PageDescription> GetAll()
         {
-            return Directory.GetFiles(GetPath())
+            return GetBlogEntries()
                 .Select(GetDescription)
+                .OrderByDescending(p => p.DateTime)
                 .ToArray();
         }
 
@@ -31,8 +33,25 @@ namespace Softumus.Blog.Models
             return new PageModel
             {
                 Description = GetDescription(fileName),
-                Content = File.ReadAllText(fileName)
+                Content = GetContent(fileName)
             };
+        }
+    
+        public static PageModel GetStatic(string fileName)
+        {
+            return new PageModel
+            {
+                Description = new PageDescription
+                {
+                    Title = Path.GetFileNameWithoutExtension(fileName)
+                },
+                Content = GetContent(fileName)
+            };
+        }
+
+        private static string GetContent(string fileName)
+        {
+            return File.ReadAllText(fileName);
         }
     
         private static PageDescription GetDescription(string fileName)
@@ -66,11 +85,22 @@ namespace Softumus.Blog.Models
 
         public static PageModel GetLatest()
         {
-            var filename = Directory.GetFiles(GetPath())
+            var filename = GetBlogEntries()
                 .OrderByDescending(p => p)
                 .First();
 
             return Get(filename);
+        }
+
+        private static ICollection<string> GetBlogEntries()
+        {
+            return Directory.GetFiles(GetPath(), _BlogEntriesPrefix + "*.*");
+        }
+
+        public static PageModel GetByName(string name)
+        {
+            var fn = Directory.GetFiles(GetPath(), name + ".*").Single();
+            return GetStatic(fn);
         }
     }
 }
