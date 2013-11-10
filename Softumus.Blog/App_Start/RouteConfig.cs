@@ -9,7 +9,8 @@ namespace Softumus.Blog
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("AllPages", "All", new {controller = "Pages", action = "All"});
+            routes.MapRoute("All", "All", new {controller = "Pages", action = "All"});
+            routes.MapRoute("About", "About", new {controller = "Pages", action = "About"});
             routes.MapRoute("Root", "", new { controller = "Pages", action = "Latest" });
 
             routes.MapRoute(

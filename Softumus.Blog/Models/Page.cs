@@ -4,6 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Web.Hosting;
+using MarkdownSharp;
 
 namespace Softumus.Blog.Models
 {
@@ -51,7 +52,8 @@ namespace Softumus.Blog.Models
 
         private static string GetContent(string fileName)
         {
-            return File.ReadAllText(fileName);
+            var content = File.ReadAllText(fileName);
+            return new Markdown().Transform(content);
         }
     
         private static PageDescription GetDescription(string fileName)

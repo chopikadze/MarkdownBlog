@@ -7,3 +7,6 @@
     display: inline-block;
     width: 7em;
 }
+.about-links li {
+    display: inline-block;
+}

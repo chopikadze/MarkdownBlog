@@ -22,6 +22,11 @@ namespace Softumus.Blog.Controllers
             return View("Index", model);
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
         public ActionResult All()
         {
             var model = new AllPagesModel
