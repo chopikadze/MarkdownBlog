@@ -6,25 +6,29 @@
         <title>@ViewBag.Title - george.softumus.com</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/Content/site.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css"/>
+		<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+		<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="/Content/site.css"/>
     </head>
     <body>
         
         <div class="container">
-            <ul class="nav nav-pills top-navigation">
-                <li><a href="/All" title="All pages"><span class="glyphicon glyphicon-home"></span></a></li>
-                <li><a href="/About" title="About me"><span class="glyphicon glyphicon-user"></span></a></li>
-            </ul>
-            <div>
-                <h2>@ViewBag.Title</h2>
-                @RenderBody()                
+        <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+        	<div class="top-navigation">@Html.Partial("_Navigation")</div>
+			<div>
+                <h1>@ViewBag.Title</h1>
+                @RenderBody()
             </div>
+        </div>
+        </div>
         </div>
 
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+		@RenderSection("scripts", false)
     </body>
 </html>

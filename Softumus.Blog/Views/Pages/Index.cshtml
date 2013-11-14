@@ -5,3 +5,16 @@
 }
 
 @Html.Raw(Model.Content)
+
+<div class="bottom-navigation">@Html.Partial("_Navigation")</div>
+
+@section scripts
+{
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCSharp.js" type="text/javascript"></script>
+<script type="text/javascript">
+SyntaxHighlighter.defaults['gutter'] = false;
+SyntaxHighlighter.all()
+</script>
+}

@@ -2,6 +2,10 @@
     border-bottom: 1px solid #eee;
     margin-bottom: 2em;
 }
+.bottom-navigation {
+    border-top: 1px solid #eee;
+    margin-top: 2em;
+}
 .page-dt {
     color: #888;
     display: inline-block;
@@ -9,4 +13,15 @@
 }
 .about-links li {
     display: inline-block;
+}
+.nav .note {
+    line-height: 40px;
+    margin: 10px;
+    color: #aaa;
+}
+div.syntaxhighlighter, pre {
+    border: 1px dotted #ccc;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
 }
