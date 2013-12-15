@@ -146,7 +146,6 @@
     <Content Include="Global.asax" />
     <Content Include="pages\20130519-RabbitMQ and Windows 8.md" />
     <Content Include="Content\ping.txt" />
-    <Content Include="robots.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

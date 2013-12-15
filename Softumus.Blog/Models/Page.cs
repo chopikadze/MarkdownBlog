@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Web;
 using System.Web.Hosting;
 using MarkdownSharp;
 
@@ -101,7 +102,9 @@ namespace Softumus.Blog.Models
 
         public static PageModel GetByName(string name)
         {
-            var fn = Directory.GetFiles(GetPath(), name + ".*").Single();
+			var fn = Directory.GetFiles(GetPath(), name + ".*").SingleOrDefault();
+			if (fn == null)
+				throw new HttpException(404, "File not found");
             return GetStatic(fn);
         }
     }
