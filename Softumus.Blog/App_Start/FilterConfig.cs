@@ -7,6 +7,7 @@ namespace Softumus.Blog
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+			filters.Add(new HandleNotFoundAttribute());
             filters.Add(new HandleErrorAttribute());
         }
     }

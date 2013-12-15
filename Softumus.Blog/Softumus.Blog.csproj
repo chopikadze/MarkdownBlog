@@ -113,6 +113,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\HandleNotFoundAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -146,6 +147,7 @@
     <Content Include="Global.asax" />
     <Content Include="pages\20130519-RabbitMQ and Windows 8.md" />
     <Content Include="Content\ping.txt" />
+    <Content Include="Views\Shared\_404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
