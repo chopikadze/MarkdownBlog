@@ -8,6 +8,7 @@ namespace Softumus.Blog
         public static void RegisterRoutes(RouteCollection routes)
         {
 			routes.IgnoreRoute("Content/{*pathInfo}");
+			routes.IgnoreRoute("robots.txt");
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("All", "All", new {controller = "Pages", action = "All"});
