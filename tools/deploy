@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+if test -d ./deploy
+	then
+		rm -R ./deploy
+fi
+
+mdtool build ./Packages.mdproj
+for a in `ls -1 ./deploy/*.tar`; do tar -xvf $a -C ./deploy/; done
+rm ./deploy/*.tar
+
+#cd deploy
+#rsync -avzR --delete . root@blog.softumus.com:/var/www/george.softumus.com
+#cd ..
+
+ssh root@blog.softumus.com '/etc/init.d/apache2 restart'
