@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Softumus.MdBlog.Models
+namespace Softumus.MarkdownBlog.Models
 {
     public class PageDescription
     {

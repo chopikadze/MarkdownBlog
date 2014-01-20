@@ -2,7 +2,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Softumus.MdBlog.App_Start
+namespace Softumus.MarkdownBlog.App_Start
 {
 	public class HandleNotFoundAttribute : ActionFilterAttribute, IExceptionFilter
 	{

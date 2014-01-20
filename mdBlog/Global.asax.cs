@@ -1,9 +1,9 @@
 ﻿using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Softumus.MdBlog.App_Start;
+using Softumus.MarkdownBlog.App_Start;
 
-namespace Softumus.MdBlog
+namespace Softumus.MarkdownBlog
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801

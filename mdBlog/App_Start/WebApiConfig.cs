@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace Softumus.MdBlog.App_Start
+namespace Softumus.MarkdownBlog.App_Start
 {
     public static class WebApiConfig
     {

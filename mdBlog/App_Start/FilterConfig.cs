@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Softumus.MdBlog.App_Start
+namespace Softumus.MarkdownBlog.App_Start
 {
     public class FilterConfig
     {
