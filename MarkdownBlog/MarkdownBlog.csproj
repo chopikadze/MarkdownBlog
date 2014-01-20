@@ -138,6 +138,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\ping.txt" />
     <Content Include="Views\Shared\_404.cshtml" />
+    <Content Include="Views\Shared\_GA.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,6 +11,11 @@ namespace Softumus.MarkdownBlog
             get { return Get("title"); }
         }
 
+        public static string GA
+        {
+            get { return Get("google.analytics"); }
+        }
+
         public static string Get(string id)
         {
             var configFileName = Page.GetPath("config");
