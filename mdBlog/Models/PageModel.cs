@@ -1,4 +1,4 @@
-﻿namespace Softumus.Blog.Models
+﻿namespace Softumus.MdBlog.Models
 {
     public class PageModel
     {

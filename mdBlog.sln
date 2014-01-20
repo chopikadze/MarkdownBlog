@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softumus.Blog", "Softumus.Blog\Softumus.Blog.csproj", "{462E3B05-4C0D-4F8F-BB9D-766211035D76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mdBlog", "mdBlog\mdBlog.csproj", "{462E3B05-4C0D-4F8F-BB9D-766211035D76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

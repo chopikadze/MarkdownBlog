@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Softumus.Blog
+namespace Softumus.MdBlog.App_Start
 {
     public class RouteConfig
     {

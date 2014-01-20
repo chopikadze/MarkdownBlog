@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Softumus.Blog.Models
+namespace Softumus.MdBlog.Models
 {
     public class AllPagesModel
     {

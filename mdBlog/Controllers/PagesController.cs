@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
-using Softumus.Blog.Models;
+using Softumus.MdBlog.Models;
 
-namespace Softumus.Blog.Controllers
+namespace Softumus.MdBlog.Controllers
 {
     public class PagesController : Controller
     {

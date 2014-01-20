@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace Softumus.Blog
+namespace Softumus.MdBlog.App_Start
 {
     public class FilterConfig
     {

@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Hosting;
 using MarkdownSharp;
 
-namespace Softumus.Blog.Models
+namespace Softumus.MdBlog.Models
 {
     public class Page
     {
