@@ -139,6 +139,7 @@
     <Content Include="Content\ping.txt" />
     <Content Include="Views\Shared\_404.cshtml" />
     <Content Include="Views\Shared\_GA.cshtml" />
+    <Content Include="Views\Shared\_Disqus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

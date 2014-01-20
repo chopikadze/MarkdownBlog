@@ -6,7 +6,9 @@
 
 @Html.Raw(Model.Content)
 
-<div class="bottom-navigation">@Html.Partial("_Navigation")</div>
+<div class="bottom-navigation"></div>
+
+@Html.Partial("_Disqus")
 
 @section scripts
 {
