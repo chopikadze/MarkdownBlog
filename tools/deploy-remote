@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+service apache2 restart
+git clone git@bitbucket.org:chopikadze/george.softumus.com.git /var/www/george.softumus.com/posts
+
