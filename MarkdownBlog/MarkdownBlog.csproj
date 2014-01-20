@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\PagesController.cs" />
+    <Compile Include="Helpers\Config.cs" />
     <Compile Include="Models\AllPagesModel.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\PageDescription.cs" />
@@ -134,22 +135,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Content\Web.config" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
-    <Content Include="Content\twitter.png" />
-    <Content Include="Content\stackoverflow.png" />
-    <Content Include="Content\linkedin.png" />
-    <Content Include="Content\google.png" />
-    <Content Include="Content\20120314\ObservableCollectionEx.cs" />
-    <Content Include="Content\20120314\TestItem.cs" />
-    <Content Include="Content\20111029\NotificationObject.cs" />
-    <Content Include="Content\20111029\On.cs" />
-    <Content Include="Content\20111029\ReSharper_PropertyChangedProperty.xml" />
-    <Content Include="pages\20111029-INotifyPropertyChanged and magic-strings.md" />
-    <Content Include="pages\20120209-Thoughts about software.md" />
-    <Content Include="pages\20120314-Extended ObservableCollection.md" />
-    <Content Include="pages\20120318-Software should be for humans.md" />
-    <Content Include="pages\20130128-Engineering and development.md" />
     <Content Include="Global.asax" />
-    <Content Include="pages\20130519-RabbitMQ and Windows 8.md" />
     <Content Include="Content\ping.txt" />
     <Content Include="Views\Shared\_404.cshtml" />
   </ItemGroup>
@@ -168,9 +154,6 @@
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Pages\About.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>

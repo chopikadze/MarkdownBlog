@@ -11,7 +11,6 @@ namespace Softumus.MarkdownBlog.App_Start
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("All", "All", new {controller = "Pages", action = "All"});
-            routes.MapRoute("About", "About", new {controller = "Pages", action = "About"});
             routes.MapRoute("Root", "", new { controller = "Pages", action = "Latest" });
 
             routes.MapRoute(
@@ -23,12 +22,6 @@ namespace Softumus.MarkdownBlog.App_Start
                 name: "Static",
                 url: "{name}",
                 defaults: new {controller = "Pages", action = "Static"});
-
-            //routes.MapRoute(
-            //    name: "Default",
-            //    url: "{controller}/{action}/{id}",
-            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            //);
-        }
+       }
     }
 }

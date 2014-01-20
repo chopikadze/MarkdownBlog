@@ -1,9 +1,9 @@
-﻿@using System.Web.UI.WebControls
+﻿@using Softumus.MarkdownBlog
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - george.softumus.com</title>
+        <title>@ViewBag.Title@(!string.IsNullOrEmpty(Config.Title) ? (" - " + Config.Title) : "")</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"/>

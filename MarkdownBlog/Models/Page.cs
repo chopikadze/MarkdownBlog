@@ -11,7 +11,7 @@ namespace Softumus.MarkdownBlog.Models
 {
     public class Page
     {
-        private const string PagesPath = "~/pages/";
+        private const string PagesPath = "~/posts/";
         private static readonly int _DateTimePrefixLength = "yyyymmdd".Length;
         private static readonly string _BlogEntriesPrefix = new string('?', _DateTimePrefixLength) + "-";
 
@@ -78,10 +78,10 @@ namespace Softumus.MarkdownBlog.Models
 
         private static string GetFileName(string date)
         {
-            return Directory.GetFiles(GetPath(), date + "*.*").Single();
+            return Directory.GetFiles(GetPath(), date + "*.md").Single();
         }
 
-        private static string GetPath(string file = "")
+        public static string GetPath(string file = "")
         {
             return HostingEnvironment.MapPath(Path.Combine(PagesPath, file));
         }
@@ -95,14 +95,14 @@ namespace Softumus.MarkdownBlog.Models
             return Get(filename);
         }
 
-        private static ICollection<string> GetBlogEntries()
+        private static IEnumerable<string> GetBlogEntries()
         {
-            return Directory.GetFiles(GetPath(), _BlogEntriesPrefix + "*.*");
+            return Directory.GetFiles(GetPath(), _BlogEntriesPrefix + "*.md");
         }
 
         public static PageModel GetByName(string name)
         {
-			var fn = Directory.GetFiles(GetPath(), name + ".*").SingleOrDefault();
+			var fn = Directory.GetFiles(GetPath(), name + ".md").SingleOrDefault();
 			if (fn == null)
 				throw new HttpException(404, "File not found");
             return GetStatic(fn);
